@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*==========================================================================*/
+
+body {
+  background: #2f7da3 url("./img/bg.svg");
+  background-size: 5%;
+  background-attachment: fixed;
+  /* height: 100vh; */
+}
+
+main {
+  width: 100%;
+  max-width: 588px;
+  margin: 5vh auto 0;
+  padding: 0 12px 12px;
+  color: var(--text-color);
+  border: 7px solid #1a222c;
+  background: #0277bd;
+}
+
+section {
+  text-align: center;
+  background: #c3e0e0;
+  border: 7px solid #1a222c;
+}
+
+/* ------ Fonts ------ */
+
+/*Title font*/
+main p, main h1 {
+  font-family: "Jersey 15", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Text font*/
+ul li a,
+footer {
+  font-family: "Gemunu Libre", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*==========================================================================*/
+
+#profile {
+  padding: 3vh 0;
+}
+
+#profile img {
+  width: 112px;
+  border: 5px solid #1a222c;
+  /* border-radius: 50%; */
+}
+
+main h1 {
+  display: inline-block;
+  font-size: 25px;
+  padding: 6px 7px;
+}
+
+#title {
+  position: relative;
+}
+
+#square {
+  display: inline-block;
+  margin-top: 2px;
+  position: absolute;
+  right: 0;
+}
+
+#square img {
+  height: 35px;
+}
+
+/*==========================================================================*/
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 2vh 0;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2vh 1vw;
+  background: var(--background-color);
+
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 2vh 0;
+  font-size: 24px;
+  gap: 0 5px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+  /* border: 1px solid red; */
+}
+
+footer {
+  padding: 2vh 0;
+}
