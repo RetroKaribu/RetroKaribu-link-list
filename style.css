@@ -8,6 +8,7 @@
   --text-color: #023188;
   --link-color: #d31a5f;
   --link-background-color: #5984bd;
+  --link-background-color-hover: #e4576a;
   --pixel-border: url(./img/pixel-border.svg);
 }
 
@@ -51,6 +52,11 @@ a {
   color: var(--link-color);
 }
 
+a:hover {
+  color: #e77988;
+  transition: color 0.2s;
+}
+
 /* ------ Fonts ------ */
 
 /*Title font*/
@@ -87,6 +93,7 @@ main h1 {
   display: inline-block;
   font-size: 28px;
   padding: 6px 7px;
+  color: #c3e0e0
 }
 
 #title {
@@ -123,11 +130,61 @@ ul li a {
   margin: 0 7%;
   background: var(--link-background-color);
   background-clip: padding-box;
-  border: 5px solid transparent;
-  border-image: var(--pixel-border) 40% / 6px stretch;
+
   color: white;
   font-size: 20px;
+
+  transition: background 0.2s;
 }
+
+ul li a:hover {
+  color: rgb(253, 211, 220);
+  background: var(--link-background-color-hover);
+}
+
+/*-----------------------------------*/
+/* Hover effect */
+@-webkit-keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+@keyframes hvr-ripple-out {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+.hvr-ripple-out {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+.hvr-ripple-out:before {
+  content: '';
+  position: absolute;
+  border: 5px solid transparent;
+  border-image: var(--pixel-border) 40% / 6px stretch;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+.hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+  -webkit-animation-name: hvr-ripple-out;
+  animation-name: hvr-ripple-out;
+}
+/*-----------------------------------*/
 
 #social-links {
   display: flex;
